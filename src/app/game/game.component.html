@@ -1,0 +1,26 @@
+<div style="margin: 50px; text-align:center">
+    <h3>Raad het getal (tussen 1 en 1000):</h3>  
+    <br>
+    <p>In dit spel moet je zo snel mogelijk het getal tussen 1 en 1000 raden.</p> 
+    <p> Druk op Start om te beginnen, vul een getal tussen 1 en 1000 in, in het veld en doe een gok.</p>
+    <p>Heb je het getal gevonden, druk dan op Restart om een nieuw spel te spelen.</p>
+    <div class="Start">
+        <button (click)="setGetal()" class="button">Start</button>
+    </div>
+    <br>
+    <div class class="game">
+        <input #myInput type=number style="margin: 10px;">      
+        <button (click)="guess(myInput.value)" style="margin: 10px;">Take a guess</button>
+        <button (click)="reset()">Restart</button>
+        <br>
+        <br>
+            {{result}}
+        <br>
+        <br>
+            <p>je hebt {{numberOfGuesses}} pogingen ondernomen</p>
+            <p>{{timeSpend}} seconden gespeeld</p> 
+    </div>  
+
+    
+    
+    </div>
